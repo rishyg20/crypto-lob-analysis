@@ -26,14 +26,11 @@ This project analyzes 12 days of Bitcoin limit order book (LOB) data at 1-second
 ## Project Structure
 ```
 crypto-lob-analysis/
-├── notebooks/
-│   ├── 01_eda_and_features.ipynb    # Data exploration & feature engineering
-│   ├── 02_predictive_modeling.ipynb  # ML model training & evaluation
-│   └── 03_visualization.ipynb        # Interactive visualizations
-├── data/
-│   └── (download from Kaggle)
+├── 01_eda_and_features.ipynb    # Data exploration & feature engineering
+├── 02_predictive_modeling.ipynb # ML model training & evaluation
 ├── README.md
-└── requirements.txt
+├── LICENSE
+└── .gitignore
 ```
 
 ## Key Findings
@@ -41,8 +38,6 @@ crypto-lob-analysis/
 ### 1. Order Book Imbalance Predicts Price Direction
 
 Order Flow Imbalance (OFI) shows 0.18 correlation with 10-second future price change — statistically significant for financial data.
-
-![OFI Correlation](outputs/figures/ofi_correlation.png)
 
 ### 2. Market Microstructure Insights
 
@@ -85,42 +80,22 @@ Created 60 features from raw LOB data:
 ## Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/crypto-lob-analysis.git
+git clone https://github.com/rishyg20/crypto-lob-analysis.git
 cd crypto-lob-analysis
 
 # Install dependencies
-pip install -r requirements.txt
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost
 
-# Download data from Kaggle and place in data/ folder
-```
-
-## Requirements
-```
-pandas>=1.3.0
-numpy>=1.21.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-scikit-learn>=0.24.0
-xgboost>=1.4.0
-plotly>=5.0.0
+# Download data from Kaggle and place in project folder
 ```
 
 ## Usage
 
 1. **EDA & Feature Engineering:**
-```
-   Open notebooks/01_eda_and_features.ipynb
-```
+   Open `01_eda_and_features.ipynb` in Jupyter or Google Colab
 
 2. **Model Training:**
-```
-   Open notebooks/02_predictive_modeling.ipynb
-```
-
-3. **Visualizations:**
-```
-   Open notebooks/03_visualization.ipynb
-```
+   Open `02_predictive_modeling.ipynb` in Jupyter or Google Colab
 
 ## Limitations & Future Work
 
@@ -139,8 +114,6 @@ plotly>=5.0.0
 ## Author
 
 **Rishabh Gupta**
-- LinkedIn: [your-linkedin]
-- Email: [your-email]
 
 ## License
 
